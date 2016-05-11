@@ -4,16 +4,16 @@ var fs = require('fs');
 var im = require('imagemagick');
 var cloudinary = require('cloudinary');
 var Kairos = require('kairos-api');
-var kairosClient = new Kairos('d2d1b083', '8de1dc9490a58fd00dbe7d63a3d4457a');
+var kairosClient = new Kairos('APP ID', 'APP KEY');
 
 var app = express();
 
 var url;
 
 cloudinary.config({ 
-  cloud_name: 'dcm7wyhlv', 
-  api_key: '461723478949849', 
-  api_secret: 'wsjfJeQhMPdzYD1hUVRT5dHTOXc' 
+  cloud_name: '*', 
+  api_key: '*', 
+  api_secret: '*' 
 });
 
 //Here we are configuring express to use body-parser as middle-ware.
