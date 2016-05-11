@@ -3,14 +3,14 @@ var mqtt    = require('mqtt');
 var cloudinary = require('cloudinary');
 var client  = mqtt.connect('mqtt://52.33.59.166:1883');
 var Kairos = require('kairos-api');
-var kairosClient = new Kairos('d2d1b083', '8de1dc9490a58fd00dbe7d63a3d4457a');
+var kairosClient = new Kairos('APP ID', 'APP KEY');
 var gcm = require('node-gcm');
 
  // the registration tokens of the devices you want to send to
-var regTokens = ['c73OO8x4d8k:APA91bHbhQxC524xW5JVN01fFKpyeAZdY96piGn57ryr5ODgvjkd5eZBu_JLPKutOfQh-KN1ZcugNIntyoyE9sWZ0nnEVof36KWdyfa5O32SB00i6OQJzajqCnZHuzV4Cg_34OVR3dmL'];
+var regTokens = ['*'];
  
 // Set up the sender with you API key 
-var sender = new gcm.Sender('AIzaSyDjTUYDqTyD0jKupmUMLxA2MoGBMTq3gxE');
+var sender = new gcm.Sender('API KEY');
 
 var url;
  
@@ -20,9 +20,9 @@ client.on('connect', function () {
 });
 
 cloudinary.config({ 
-  cloud_name: 'dcm7wyhlv', 
-  api_key: '461723478949849', 
-  api_secret: 'wsjfJeQhMPdzYD1hUVRT5dHTOXc' 
+  cloud_name: '*', 
+  api_key: '*', 
+  api_secret: '*' 
 });
 
 
